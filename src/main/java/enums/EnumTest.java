@@ -1,4 +1,4 @@
-package enum_ja;
+package enums;
 
 /**
  * EnumTest: Enum 测试文档
@@ -9,7 +9,6 @@ class EnumTest {
 
   /**
    * 普通枚举
-   *
    */
   public enum ColorEnum {
     red, green, yellow, blue;
@@ -126,4 +125,5 @@ class EnumTest {
       System.out.println(order.getName());
     }
   }
+
 }

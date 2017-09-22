@@ -3,9 +3,13 @@ package annotation;
 /**
  * HelloAnoTest:
  *
- * @author: Chengjs, version:1.0.0, 2017-04-26
- */
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+ * @version: 1.0.0, 2017-09-22
+ *
+ * ALL RIGHTS RESERVED,COPYRIGHT(C) FCH LIMITED Shanghai Servyou Ltd 2017
+ **/
 public class HelloAnoTest {
+
   @HelloAno
   public void sayHello(final String name) {
     System.out.println("===>> Hi, " + name + "[sayHello]");
@@ -20,4 +24,5 @@ public class HelloAnoTest {
     final HelloProcessor hp = new HelloProcessor();
     hp.parseMethod(HelloAnoTest.class);
   }
+
 }

@@ -3,11 +3,16 @@ package annotation;
 import java.lang.reflect.Method;
 
 /**
- * ReflectProcessor:
+ * HelloProcessor:
  *
- * @author: Chengjs, version:1.0.0, 2017-04-26
- */
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+            <a href="https://github.com/MiniPa">minipa_github</a>
+ * @version: 1.0.0, 2017-09-22
+ *
+ * shared by all free coders
+ **/
 public class HelloProcessor {
+
   public void parseMethod(final Class<?> clazz) throws Exception {
     final Object obj = clazz.getConstructor(new Class[]{}).newInstance(new Object[]{});
     final Method[] methods = clazz.getDeclaredMethods();
@@ -18,4 +23,5 @@ public class HelloProcessor {
       }
     }
   }
+
 }
