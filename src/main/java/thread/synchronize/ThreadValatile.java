@@ -9,6 +9,9 @@ package thread.synchronize;
 		写操作,可能消耗性能更多些  ==> 把握不住尽量用synchronized
 	
 	3.volatile & final不能修饰同一字段
+
+  4.TODO 想明白在什么特定情况下使用volatile才是正途
+
  */
 public class ThreadValatile {
 	public static void main(String[] args) {

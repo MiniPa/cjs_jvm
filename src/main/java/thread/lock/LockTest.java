@@ -33,6 +33,7 @@ class LockOutputer {
 	public void out(String name) {
 		lock.lock();
 		try {
+		  /*如下的操作整体来看是原子性的,所以要用锁来锁定,以达到各线程先后执行目的*/
 			for (int i = 0; i < name.length(); i++) {
 				System.out.print(name.charAt(i));
 				Thread.sleep(200);

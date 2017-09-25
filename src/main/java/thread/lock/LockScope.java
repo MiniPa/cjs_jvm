@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * LockScope: lock 具有更灵活的结构
+ * LockScope: lock相对于synchronized 具有更大的灵活性
  *
  * @author: Chengjs, version:1.0.0, 2017/4/24
  */
@@ -21,13 +21,13 @@ public class LockScope {
   }
 
   private class SubTractor implements Runnable {
-
     @Override
     public void run() {
       while (true) {
         /**
          * synchornized(LockScope.this){
-         *  System.out.println("j--="+j--)}
+         *  System.out.println("j--="+j--)
+         * }
          */
         lock.lock();
         try {
@@ -40,12 +40,12 @@ public class LockScope {
   }
 
   private class Adder implements Runnable {
-
     @Override
     public void run() {
         /**
          * synchornized(LockScope.this){
-         *  System.out.println("j++="+j++)}
+         *  System.out.println("j++="+j++)
+         * }
          */
       while (true) {
         lock.lock();

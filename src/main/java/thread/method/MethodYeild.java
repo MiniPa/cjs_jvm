@@ -1,10 +1,19 @@
 package thread.method;
 
 import org.junit.Test;
-/** 
- 	yeild() 暂停当前执行的thread对象,并执行其他thread / 正在执行的thread,让出CPU 
- 	若存在synchronized线程同步,yeild()不释放锁(monitor)
- */
+
+/**
+ * MethodYeild:
+ *
+ * yeild() 暂停当前执行的thread对象,并执行其他thread / 正在执行的thread,让出CPU
+ * 若存在synchronized线程同步,yeild()不释放锁(monitor)
+ * 
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+            <a href="https://github.com/MiniPa">minipa_github</a>
+ * @version: 1.0.0, 2017-09-25 
+ * 
+ * shared by all free coders
+ **/
 public class MethodYeild {
 	@Test
 	public void testYeild() throws InterruptedException{

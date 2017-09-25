@@ -45,8 +45,8 @@ public class ThreadCondition {
 			}
 		}
 	}
-	
 }
+
 class BusinessCondition {
 	private boolean bool = true;
 	private Lock lock = new ReentrantLock();
@@ -70,7 +70,7 @@ class BusinessCondition {
 		lock.lock();
 		try {
 			while(!bool) {
-				condition.await();//
+				condition.await();
 			}
 			for (int i = 0; i < 10; i++) {
 				System.out.println("sub thread seq of " + i + "loop of " + loop);
