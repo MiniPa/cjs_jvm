@@ -4,11 +4,18 @@ import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
-/*
+
+/**
+ * FutureTaskPattern:
+ *
  * Callable: 可有返回值(Future去拿)  Runnable：无返回值
- * Future: 获取异步线程返回值    Future模式: http://openhome.cc/Gossip/DesignPattern/FuturePattern.htm
+ * Future: 获取异步线程返回值
+ * Future模式: http://openhome.cc/Gossip/DesignPattern/FuturePattern.htm
  * FutureTask: implements Runnable && Future
- */
+ *
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+ * @version: 1.0.0, 2017-09-25 
+ **/
 public class FutureTaskPattern {
 	public static void main(String[] args) {
 		Callable<Integer> callable = new Callable<Integer>() {
@@ -18,8 +25,8 @@ public class FutureTaskPattern {
 			}
 		};
 		FutureTask<Integer> future = new FutureTask<Integer>(callable);
-		new Thread(future).start();
-		try {
+    new Thread(future).start();
+    try {
 			Thread.sleep(2000);
 			System.out.println(future.get());
 		} catch (InterruptedException e) {

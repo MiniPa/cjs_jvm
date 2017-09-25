@@ -4,17 +4,27 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-/*
- * Condition: 将Object监视器method(wait notify notifyAll)分解成不同的对象
- * 				这些对象可与Lock组合使用,为每个对象提供set(wait-set)
- * 			await()--wait()  signal()--notify() signalAll()--notifyAll()
+/**
+ * ThreadCondition:
+ *
+ * Condition:
+ *  将Object监视器method(wait notify notifyAll)分解成不同的对象
+ * 	这些对象可与lock组合使用,为每个对象提供
+ * 	  set(wait-set) await()--wait()
+ * 	  signal()--notify() signalAll()--notifyAll()
  * Lock 替代 synchronized
- * Condition 替代 Object monitor 
- * 
+ * Condition 替代 Object monitor
+ *
  * Condition 和 传统线程通信区别：可以为多个线程间建立不同的Condition
- * 
+ *
  * 子线程循环10次 主线程循环100次 如此循环100次
- * */
+ *
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+            <a href="https://github.com/MiniPa">minipa_github</a>
+ * @version: 1.0.0, 2017-09-25 
+ * 
+ * shared by all free coders
+ **/
 public class ThreadCondition {
 	public static void main(String[] args) {
 		final BusinessCondition business = new BusinessCondition();

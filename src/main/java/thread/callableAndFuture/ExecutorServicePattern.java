@@ -7,6 +7,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+/**
+ * ExecutorServicePattern: Callable&&Future获取线程返回的值
+ * 
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+ * @version: 1.0.0, 2017-09-25 
+ **/
 public class ExecutorServicePattern {
 	public static void main(String[] args) {
 		ExecutorService threadPool = Executors.newSingleThreadExecutor();
@@ -25,6 +31,8 @@ public class ExecutorServicePattern {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
-		}
-	}
+		} finally {
+		  threadPool.shutdown();
+    }
+  }
 }

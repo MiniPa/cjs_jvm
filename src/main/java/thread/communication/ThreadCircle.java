@@ -1,8 +1,17 @@
 package thread.communication;
+
 /**
+ * ThreadCircle: 案例
+ *
  * 子线程循环10次 主线程循环100次 如此循环100次
  * 1.wait()建议用while(), wait()和notify()必须位于 synchronized内部, 且只能由锁对象来调用
- */
+ *
+ * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
+            <a href="https://github.com/MiniPa">minipa_github</a>
+ * @version: 1.0.0, 2017-09-25 
+ * 
+ * shared by all free coders
+ **/
 public class ThreadCircle {
 	public static void main(String[] args) {
 		final Business business = new Business();

@@ -19,7 +19,7 @@ public class BigPlate {
 			e.printStackTrace();
 		}
 		// 下处输出有时候不明确,因为与put操作不是一个原子操作
-		System.out.println("放入鸡蛋");
+		System.out.println("放入鸡蛋,现在有" + eggBasket.size());
 	}
 	public Object getEgg() {
 		Object egg = null;
@@ -29,7 +29,7 @@ public class BigPlate {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("取到鸡蛋");
+		System.out.println("取到鸡蛋,现在有" + eggBasket.size());
 		return egg;
 	}
 	
