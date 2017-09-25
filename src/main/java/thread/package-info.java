@@ -10,7 +10,6 @@
  *            一致性 (不能保证有序性) ==> valatile, 弱同步不阻塞  ==> 主/私内存部分可见
  *
  *
- *
  * 1.线程状态：
  *  1) new 新建状态 => start() => 2)
  *  2) available 可运行状态 [ => schedule开始调度 => 3), 执行条件 lock,scheduler,sleep ]
