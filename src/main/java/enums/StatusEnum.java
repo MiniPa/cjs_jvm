@@ -21,9 +21,6 @@ public enum StatusEnum {
 	/**操作失败*/
 	HANDLE_FAIL("2","操作异常"),
 
-
-
-
 	;
 	
 	

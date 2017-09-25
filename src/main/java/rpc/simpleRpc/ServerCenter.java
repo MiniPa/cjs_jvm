@@ -16,6 +16,7 @@ import java.util.concurrent.Executors;
 
 /**
  * Description: ServerCenter 服务中心实现类
+ *
  * Created by Chengjs on 2017/4/21 @version 1.0.
  */
 public class ServerCenter implements Server {
@@ -69,9 +70,7 @@ public class ServerCenter implements Server {
   }
 
   private static class ServiceTask implements Runnable {
-
     Socket client = null;
-
     public ServiceTask(Socket client) {
       this.client = client;
     }
@@ -81,6 +80,7 @@ public class ServerCenter implements Server {
       ObjectInputStream ois = null;
       ObjectOutputStream oos = null;
       try {
+
         /*2.将client发送的码流反序列化为对象,反射调用服务实现者,获取执行结果*/
         ois = new ObjectInputStream(client.getInputStream());
         String serviceName = ois.readUTF();
