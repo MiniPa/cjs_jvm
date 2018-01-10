@@ -1,4 +1,4 @@
-package annotation;
+package annotation.hello;
 
 /**
  * HelloMain:
