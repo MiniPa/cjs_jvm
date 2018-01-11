@@ -11,7 +11,8 @@ package thread.synchronize;
 	3.volatile & final不能修饰同一字段
 
   4.TODO 想明白在什么特定情况下使用volatile才是正途
-
+    如下案例，最终i j都会加到10, 但是addAll() 和 pringAll() 并发有序性不能得到保证,
+      很可能在printAll()期间，addAll()执行了多次
  */
 public class ThreadValatile {
 	public static void main(String[] args) {
@@ -36,8 +37,8 @@ public class ThreadValatile {
 }
 
 class ThreadUnsafteCaculate{
-	static int i = 0, j = 0;
-//	static volatile int i = 0, j = 0;
+//	static int i = 0, j = 0;
+	static volatile int i = 0, j = 0;
 	static void addAll() {
 //	static synchronized void addAll() {
 		i++;

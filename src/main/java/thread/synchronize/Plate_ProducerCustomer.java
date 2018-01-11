@@ -3,7 +3,7 @@ package thread.synchronize;
 import java.util.ArrayList;
 import java.util.List;
 /*
-  JDK1.5前传统线程通信方式
+  JDK1.5前传统线程通信方式, 多线程线程安全方式共享变量。
  	Add thread 判断plate：1)为空 放入egg 唤醒阻塞队列中1个 Get thread  2)不为空 等待 进入阻塞队列
  	Get thread 判断palte: 1)为空 等待 进入阻塞队列   2)不为空 取得egg 唤醒阻塞队列1个 Add thread 
  */

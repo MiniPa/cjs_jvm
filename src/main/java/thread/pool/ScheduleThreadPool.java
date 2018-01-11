@@ -5,7 +5,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 /**
- * ScheduleThreadPool:定时执行线程
+ * ScheduleThreadPool: 定时执行线程
  * 
  * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
             <a href="https://github.com/MiniPa">minipa_github</a>
