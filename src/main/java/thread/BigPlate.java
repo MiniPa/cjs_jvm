@@ -21,6 +21,7 @@ public class BigPlate {
 		// 下处输出有时候不明确,因为与put操作不是一个原子操作
 		System.out.println("放入鸡蛋,现在有" + eggBasket.size());
 	}
+
 	public Object getEgg() {
 		Object egg = null;
 		try {

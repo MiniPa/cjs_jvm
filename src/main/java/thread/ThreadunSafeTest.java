@@ -12,8 +12,10 @@ import org.junit.Test;
  * 线程不安全类解决方式: threadUnsafeSolution
  * 1.ThreadUnsafeCount 中 private int num; 变成count局部变量
  * ==> 每个thread各自调用对象 count()产生的局部变量
+ *
  * 2.ThreadUnsafeCount count = new ThreadUnsafeCount(); 变成run()方法局部变量
  * ==> 每个thread启动时候 run()内局部变量
+ *
  * 3.每次启动thread new一个新的线程类(不建议)
  **/
 public class ThreadunSafeTest {
@@ -37,17 +39,18 @@ public class ThreadunSafeTest {
 
 }
 
-/*线程不安全类,其成员变量可能会导致整个操作非原子*/
+/*线程不安全类,其成员变量可能会导致整个操作非原子, 会发生各种奇葩事情，预料不到的奇葩事情。*/
 class ThreadUnsafeCount {
   /*成员变量,线程不安全*/
   private int num;
 
   @Test
   public void count(/*局部变量,线程安全*/) {
-    for (int i = 1; i <= 10; i++) {
-      num += i;
+    System.out.println(Thread.currentThread().getName() + "start-num: " + num);
+    for (int i = 1; i <= 100; i++) {
+      num += 10;
     }
-    System.out.println(Thread.currentThread().getName() + "-num: " + num);
+    System.out.println(Thread.currentThread().getName() + "end-num: " + num);
   }
 }
 
@@ -58,7 +61,7 @@ class ThreadUnsafeCount {
   @Test
   public void count(*//*局部变量,线程安全*//*) {
     for (int i = 1; i <= 10; i++) {
-      num += i;
+      num += 1;
     }
     System.out.println(Thread.currentThread().getName() + "-num: " + num);
   }
