@@ -17,11 +17,13 @@ public class EnumCollection {
   }
 
   public static void main(String[] args) {
+    /*EnumSet 测试*/
     EnumSet<WeekEnum> weekSet = EnumSet.allOf(WeekEnum.class);
     for (WeekEnum weekEnum : weekSet) {
-      System.out.println(weekEnum);
+      System.out.println("EnumSet ==> " + weekEnum);
     }
 
+    /*EnumMap 测试1*/
     EnumMap<WeekEnum, String> weekMap = new EnumMap<WeekEnum, String>(WeekEnum.class);
     weekMap.put(WeekEnum.FRI, "星期五");
     weekMap.put(WeekEnum.MON, "星期一");
@@ -30,6 +32,7 @@ public class EnumCollection {
       System.out.println(entry.getKey().name() + ":" + entry.getValue());
     }
     System.out.println("+++++++++++++++++++");
+    /*EnumMap 测试2*/
     for (Map.Entry<WeekEnum, String> entry : weekMap.entrySet()) {
       System.out.println(entry.getKey().name() + ":" + entry.getValue());
     }

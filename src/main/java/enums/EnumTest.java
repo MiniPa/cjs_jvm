@@ -31,9 +31,7 @@ class EnumTest {
   }
 
   /**
-   * 性别
-   *
-   * 带有constructor的构造器
+   * 性别 带有constructor的构造器
    */
   private enum GenderEnum {
     MAN("MAN"), WOMEN("WOMEN");
@@ -49,10 +47,7 @@ class EnumTest {
   }
 
   /**
-   * 订单状态
-   *
-   * 实现带有抽象方法的枚举
-   *
+   * 订单状态 实现带有抽象方法的枚举
    */
   public enum OrderStateEnum {
     /** 已取消 */
@@ -72,7 +67,6 @@ class EnumTest {
 
     public abstract String getName();
   }
-
 
   public static void main(String[] args) {
     ColorEnum colorEnum = ColorEnum.blue;
