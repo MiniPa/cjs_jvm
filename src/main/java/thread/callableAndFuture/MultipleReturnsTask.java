@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
  * <p>
  * CompletionService: 提交到CompletionService中的Future 是按照完成的顺序排列的
  * ==> TODO 上面的描述需要仔细理解,最好翻看源码学习下
- *  上面的描述是不靠谱的,不知道为啥? 请参照下面眼结果,发现结果顺序是不确定的.
+ *  上面的描述是不靠谱的,不知道为啥? 请参照下面眼结果,发现结果顺序是不确定的
  *  可能我理解有误区, for循环中先完成的线程不一定就是先启动的线程
  *
  * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>

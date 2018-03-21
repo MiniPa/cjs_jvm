@@ -9,8 +9,7 @@
  *  两大特性： 可见性 有序性(原子操作) ==> synchronized ,         ==> 主/私内存整体可见
  *            一致性 (不能保证有序性) ==> valatile, 弱同步不阻塞  ==> 主/私内存部分可见
  *
- *
- * 1.线程状态：
+ * 1.线程状态 jvm角度：
  *  1) new 新建状态 => start() => 2)
  *  2) available 可运行状态 [ => schedule开始调度 => 3), 执行条件 lock,scheduler,sleep ]
  *  3) runnable 运行状态
@@ -19,7 +18,7 @@
  *     也许线程对象是活的,但已经不是单独执行的线程,强行再start,IllegalThreadStateException
  *
  * 2.线程操作：
- *  1) interrupted
+ *  1) interrupted(wait,join,sleep)
  *  2) join
  *  3) sleep 不让lock,(告诉cpu未来n/s时间内,不会去争cpu,时间过了则按正常方式获取cpu)
  *  4) yeild 让出cpu 不让lock, 非同锁线程可以尝试获取cpu执行了
@@ -33,6 +32,17 @@
  * 4.threadPool
  *   fixedThreadPool cachedThreadPool singleThreadPool scheduledThreadPool
  *
+ * 5.线程共享变量
+ *    成员变量，线程不安全
+ *    局部变量，线程安全
+ *
+ * 6.同步操作
+ *    synchronized, volatile
+ *    ReentrantLock,  ReadWriteLock, Condition,
+ *    ExecutorService(Fixed,Cached,Single), ScheduledExecutorService(Scheduled)<Timer,  TimerTask>
+ *    Runnable, Callable, Future, FutureTask, CompletionService
+ *    ForkJoin
+ *    ThreadLocal
  *
  * @author: <a href="mailto:chengjs@servyou.com.cn">chengjs</a>
             <a href="https://github.com/MiniPa">minipa_github</a>

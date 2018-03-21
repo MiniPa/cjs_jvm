@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /*
- * ThreadLocal: 存放值thread内共享,thread间互斥
+ * ThreadLocal: 存放值thread内共享, thread间互斥
  * 
  * ThreadLocalMap: ThreadLocal内部类 存放[ThreadLcoal对象,存放的值]
  * 每个线程都对应一个本地变量的Map,一个线程可以存在多个线程本地变量

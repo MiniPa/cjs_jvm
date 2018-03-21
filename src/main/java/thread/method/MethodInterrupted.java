@@ -21,7 +21,7 @@ public class MethodInterrupted {
 	public void interruptedTest() throws InterruptedException{
 		SubThread t = new SubThread("SubThread");
 		t.start();
-		Thread.sleep(1);
+		Thread.sleep(10);
 		t.interrupt();
 	}
 }
