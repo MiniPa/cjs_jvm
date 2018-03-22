@@ -14,6 +14,10 @@
  *
  * 问题：实际工作中，并未找到合适的使用annotation能大幅提高性能,优化代码的位置。
  *
+ *  class.getAnnotation();
+ *  method.getAnnotation();
+ *  @Inherited http://blog.csdn.net/snow_crazy/article/details/39381695
+ *
  * author: Chengjs, version:1.0.0, 2017-09-22
  */
 package annotation;

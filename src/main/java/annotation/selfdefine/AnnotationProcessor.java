@@ -12,5 +12,8 @@ public class AnnotationProcessor {
     System.out.println("preamble date: " + preamble.date());
     System.out.println("preamble version: " + preamble.version());
     System.out.println("preamble reviewers: " + preamble.reviewers().toString());
+
+//    InheritedAnnotation inher = AnnotationClass.class.getAnnotation(InheritedAnnotation.class);
+//    System.out.println("preamble reviewers: " + inher.inher().toString());
   }
 }

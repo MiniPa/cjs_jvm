@@ -4,7 +4,7 @@ package annotation.selfdefine;
  * AnnotationClass:
  * author: Chengjs, version:1.0.0, 2018-01-10
  */
-@InheritedAnnotation
+@InheritedAnnotation(inher = "ok nothing")
 @ClassPreamble(
     author = "minipa",
     date = "10/01/2018",

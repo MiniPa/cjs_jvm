@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * 返回结果状态。
- *
  */
 public enum StatusEnum {
 	

@@ -8,4 +8,5 @@ import java.lang.annotation.Inherited;
  */
 @Inherited
 public @interface InheritedAnnotation {
+  String inher() default "nothing";
 }
