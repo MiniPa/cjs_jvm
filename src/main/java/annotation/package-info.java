@@ -14,6 +14,8 @@
  *
  * 问题：实际工作中，并未找到合适的使用annotation能大幅提高性能,优化代码的位置。
  *
+ * java.lang.annotation.Inherited; @Inherited 表示当前注解会被注解的子类继承
+ *
  *  class.getAnnotation();
  *  method.getAnnotation();
  *  @Inherited http://blog.csdn.net/snow_crazy/article/details/39381695

@@ -15,9 +15,13 @@ public @interface DemoAnnotation {
 
   /*注解属性类型不能是复杂的对象*/
   String color() default "blue";
+
   String value();
+
   int[] arrayAttr() default {1,2,3};
+
   EnmTrafficLamp lamp() default EnmTrafficLamp.RED;
+
   MetaAnnotation annotationAttr() default @MetaAnnotation("xdp");
 
 }
