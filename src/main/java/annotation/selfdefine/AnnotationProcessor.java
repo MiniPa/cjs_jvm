@@ -2,7 +2,7 @@ package annotation.selfdefine;
 
 /**
  * AnnotationProcessor:
- * author: Chengjs, version:1.0.0, 2018-01-10
+ * @author: Chengjs, version:1.0.0, 2018-01-10
  */
 public class AnnotationProcessor {
 
@@ -13,7 +13,7 @@ public class AnnotationProcessor {
     System.out.println("preamble version: " + preamble.version());
     System.out.println("preamble reviewers: " + preamble.reviewers().toString());
 
-//    InheritedAnnotation inher = AnnotationClass.class.getAnnotation(InheritedAnnotation.class);
-//    System.out.println("preamble reviewers: " + inher.inher().toString());
+    InheritedAnnotation inher = AnnotationClass.class.getAnnotation(InheritedAnnotation.class);
+    System.out.println("preamble reviewers: " + inher.inher().toString());
   }
 }
